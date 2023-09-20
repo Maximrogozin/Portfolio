@@ -37,7 +37,7 @@ const Main = () => {
               repeat={Infinity}
             />
           </h2> */}
-          <h2>
+          <h2 className="flex text-center">
             {language === "en"
               ? "I develop responsive and functional websites."
               : "Я разрабатываю адаптивные и функциональные сайты."}

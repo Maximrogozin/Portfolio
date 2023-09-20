@@ -12,7 +12,7 @@ const About = () => {
     >
       <div className="flex flex-col mx-auto max-w-[1040px] items-center space-y-4">
         <img src={avatar} alt="ava" className="w-48 h-48 rounded-full" />
-        <p className="text-lg font-semibold">
+        <p className="text-lg font-semibold text-center mx-2">
           {language === "en"
             ? "Hello! I'm Maxim Rogozin, Front-end developer."
             : "Привет! Я Максим Рогозин, я Front-end разработчик."}
