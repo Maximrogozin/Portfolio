@@ -97,10 +97,16 @@ const Contact = () => {
               name="name"
               style="border-2 rounded-lg p-3 flex border-gray-300 dark:bg-gray-300"
               rules={{
-                required: "Это поле обязательно для заполнения",
+                required:
+                  language === "en"
+                    ? "This field is required."
+                    : "Это поле обязательно для заполнения",
                 minLength: {
                   value: 3,
-                  message: "Поле должно содержать минимум 3 символа",
+                  message:
+                    language === "en"
+                      ? "Field must contain at least 3 characters."
+                      : "Поле должно содержать минимум 3 символа",
                 },
               }}
               error={errors.name}
@@ -116,10 +122,16 @@ const Contact = () => {
               type="email"
               style="border-2 rounded-lg p-3 flex border-gray-300 dark:bg-gray-300"
               rules={{
-                required: "Это поле обязательно для заполнения",
+                required:
+                  language === "en"
+                    ? "This field is required."
+                    : "Это поле обязательно для заполнения",
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                  message: "Неверный формат электронной почты",
+                  message:
+                    language === "en"
+                      ? "Invalid email format."
+                      : "Неверный формат электронной почты",
                 },
               }}
               error={errors.email}
@@ -131,10 +143,16 @@ const Contact = () => {
             </label>
             <textarea
               {...register("message", {
-                required: "Это поле обязательно для заполнения",
+                required:
+                  language === "en"
+                    ? "This field is required."
+                    : "Это поле обязательно для заполнения",
                 minLength: {
                   value: 6,
-                  message: "Поле должно содержать минимум 6 символов",
+                  message:
+                    language === "en"
+                      ? "Field must contain at least 6 characters."
+                      : "Поле должно содержать минимум 6 символа",
                 },
               })}
               className="border-2 rounded-lg p-3 border-gray-300 dark:bg-gray-300"
