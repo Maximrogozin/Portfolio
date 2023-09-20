@@ -20,23 +20,43 @@ const Main = () => {
           <h1 className="sm:text-6xl text-4xl font-bold text-[#001b5e] dark:text-gray-300">
             {language === "en" ? "Maxim" : "Максим"}
           </h1>
-          {/* <h2 className="flex sm:tex-3xl text-2xl pt-4 text-[#001b5e] dark:text-green-300">
-            I'm a
-            <TypeAnimation
-              sequence={[
-                "Developer",
-                2000,
-                "Coder",
-                2000,
-                "Tech Enthusiast",
-                2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{ fontSize: "1em", paddingLeft: "5px" }}
-              repeat={Infinity}
-            />
-          </h2> */}
+          {language === "en" ? (
+            <h2 className="flex sm:tex-3xl text-2xl pt-4 text-[#001b5e] dark:text-green-300">
+              I'm a
+              <TypeAnimation
+                sequence={[
+                  "Developer",
+                  2000,
+                  "Coder",
+                  2000,
+                  "Tech Enthusiast",
+                  2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{ fontSize: "1em", paddingLeft: "5px" }}
+                repeat={Infinity}
+              />
+            </h2>
+          ) : (
+            <h2 className="flex sm:tex-3xl text-2xl pt-4 text-[#001b5e] dark:text-green-300">
+              Я
+              <TypeAnimation
+                sequence={[
+                  "Разработчик",
+                  2000,
+                  "Кодер",
+                  2000,
+                  "Технический энтузиаст",
+                  2000,
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{ fontSize: "1em", paddingLeft: "5px" }}
+                repeat={Infinity}
+              />
+            </h2>
+          )}
           <h2 className="flex text-center">
             {language === "en"
               ? "I develop responsive and functional websites."
